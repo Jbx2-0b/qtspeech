@@ -1,7 +1,7 @@
 include($QT_INSTALL_DOCS/global/qt-module-defaults.qdocconf)
 
 project = QtSpeech
-description = Qt Text-To-Speech library
+description = Qt Speech Documentation
 version = $QT_VERSION
 
 sourcedirs += ..
@@ -10,9 +10,13 @@ headerdirs += ..
 imagedirs += images
 
 exampledirs += \
+              snippets \
               ../../examples/speech
 
+excludedirs += snippets
+
 examplesinstallpath = speech
+examples.fileextensions += "*.jsgf"
 
 depends += qtcore qtdoc
 

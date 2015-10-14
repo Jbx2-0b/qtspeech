@@ -26,27 +26,27 @@
 ****************************************************************************/
 
 /*!
-    \module QtTextToSpeech
-    \title Qt Text-to-speech C++ Classes
-    \brief Provides C++ API to access text-to-speech engines.
-    \qtvariable texttospeech
-*/
+    \example qmlspeech
+    \title Speech Recognition Example
 
-/*!
-    \module QtSpeechRecognition
-    \title Qt Speech Recognition C++ Classes
-    \brief Provides C++ API to access speech recognition engines.
-    \qtvariable speechrecognition
-*/
+    \brief The example recognizes commands from two simple grammars using PocketSphinx engine
 
-/*!
-    \page qtspeech-modules.html
-    \title Qt Speech C++ Classes
-    \ingroup modules
+    The example demonstrates how QSpeechRecognition can be used for basic speech recognition tasks.
+    The user can select a grammar and start/stop recording for command recognition.
 
-    \section1 Qt Text-to-speech
-    \generatelist classesbymodule QtTextToSpeech
+    The main grammar recognizes commands "up", "down", "left", "right", "forward" and "backward"
+    with a couple of additional filler words. The grammar source is located in file
+    grammar/directions.jsgf in the qmlspeech example directory.
 
-    \section1 Qt Speech Recognition
-    \generatelist classesbymodule QtSpeechRecognition
+    The other grammar only recognizes commands "yes" and "no". The grammar source is located in
+    file grammar/yesno.jsgf in the qmlspeech example directory.
+
+    Requirements:
+    \list
+       \li US English acoustic model files for PocketSphinx copied
+           to directory speechres/en/acmod under the user home directory.
+       \li cmudict dictionary in file speechres/en/lexicon.dict under the user home directory.
+    \endlist
+
+    \image qmlspeech-example.png
 */
